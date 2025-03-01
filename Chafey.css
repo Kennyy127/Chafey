@@ -278,23 +278,34 @@ footer img {
 /* Make Products Responsive */
 @media (max-width: 1024px) {
     .product-container {
+        display: flex;
         flex-direction: column; /* Stack products in a column */
-        align-items: center;
+        align-items: center; /* ✅ Ensures products are centered */
+        justify-content: center;
+        width: 100%;
     }
-    
+
     .product {
-        width: 80%; /* Each product takes up most of the screen width */
+        width: 90%; /* ✅ Makes sure products take up a good portion */
+        max-width: 400px; /* ✅ Prevents it from becoming too big */
+        margin: 10px auto; /* ✅ Centers it properly */
     }
 }
 
 /* Center the product section on mobile */
 @media (max-width: 768px) {
     .product-container {
+        display: flex;
         flex-direction: column; /* Stack products in a column */
-        align-items: center;
+        align-items: center; /* ✅ Ensures products are centered */
+        justify-content: center;
+        width: 100%;
     }
 
     .product {
-        width: 90%; /* Each product takes more space */
+        width: 95%; /* ✅ Makes products take more space */
+        max-width: 350px; /* ✅ Prevents it from being too large */
+        margin: 10px auto; /* ✅ Keeps spacing consistent */
     }
 }
+
